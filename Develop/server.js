@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const PORT = 3001;
 const notesdb = require('./db/db.json');
-const id = require('uuid');
+const id = require('uuid').v4;
 
 const app = express();
 
@@ -32,7 +32,7 @@ app.post('/api/notes', (req, res) => {
   };
 
   //assign new note an id
-  newNote.id = id.v4();
+  newNote.id = id();
   notesdb.push(newNote);
   res.json(newNote);
 });
