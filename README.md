@@ -1,1 +1,6 @@
-# Note Taker Starter Code
+# bdaNoteTaker
+
+## What is this?
+
+
+## Features:
