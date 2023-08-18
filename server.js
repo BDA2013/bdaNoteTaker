@@ -30,6 +30,7 @@ app.post('/api/notes', (req, res) => {
     text: newNoteText
   };
 
+  // Assign new note an id
   newNote.id = id();
   notesdb.push(newNote);
   res.json(newNote);
